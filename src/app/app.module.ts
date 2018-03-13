@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,  NO_ERRORS_SCHEMA  } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -25,6 +26,16 @@ import { FormsModule } from '@angular/forms';
       //{ path: "**", component: PageNotFoundComponent }
       ],{useHash: true}),
       FormsModule
+=======
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    MDBBootstrapModule.forRoot()
+>>>>>>> master
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
