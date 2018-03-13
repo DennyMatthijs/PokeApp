@@ -8,19 +8,22 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { Navigation } from 'selenium-webdriver';
 import { FormsModule } from '@angular/forms';
+import { PokedexComponent } from './pokedex/pokedex.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WelcomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    PokedexComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
+      { path: 'pokedex', component: PokedexComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       //{ path: "**", component: PageNotFoundComponent }
       ],{useHash: true}),
