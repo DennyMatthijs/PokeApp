@@ -1,0 +1,38 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark red">
+    
+<!-- Navbar brand -->
+
+<logo><a class="navbar-brand" href="#"><img class="pokeLogo" src="../../assets/images/pokeball_logo.png" alt=""> PokeApp</a></logo>
+
+<!-- Collapsible content -->
+<links>
+
+ <!-- Links -->
+ <ul class="navbar-nav mr-auto">
+     <li class="nav-item" [routerLinkActive]="['active']">
+         <a [routerLink]="['/home']" class="nav-link waves-light" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
+     </li>
+     <li class="nav-item" [routerLinkActive]="['active']">
+         <a [routerLink]="['/pokedex']" class="nav-link waves-light" mdbRippleRadius>PokeDex</a>
+     </li>
+     <li class="nav-item" [routerLinkActive]="['active']">
+         <a [routerLink]="['/map']" class="nav-link waves-light" mdbRippleRadius>Map</a>
+     </li>
+ </ul>
+ <!-- Links -->
+ </links>
+<!-- Collapsible content -->
+    
+</mdb-navbar>
+<!--/.Navbar-->
+
+<div class="redLine">
+        <img class="pokeBtn" src="../../assets/images/pokeball_button.png" alt="">
+</div>
+
+<div class="blackLine">
+               
+</div>
+
+

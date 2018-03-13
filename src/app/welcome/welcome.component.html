@@ -1,0 +1,26 @@
+
+ <div class="card">
+
+            <!--Card image-->
+            <img *ngIf="imageUrl" class="img-fluid" [src]="imageUrl" alt="Card image cap">
+        
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title">Welcome to PokeApp!</h4>
+                <!--Text-->
+
+                <select class="form-control" [(ngModel)]="audioNr">
+                        <option *ngFor="let i of audioFiles" value="{{i}}">Pokemon Theme {{i}}</option>
+                </select>
+
+                <audio id="audio" controls>
+                        <source [src]="audio" type="audio/mpeg">
+                        Your browser does not support the audio element
+                </audio>
+
+                <p class="card-text">This website is designed to give an overview of every single pokemon available right now. Enjoy some music while you're at it!</p>
+        
+            </div>
+        
+        </div>
