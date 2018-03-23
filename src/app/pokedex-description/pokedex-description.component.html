@@ -1,0 +1,19 @@
+
+ <div *ngIf="_svc._selectedPokemon != null" class="card">
+
+    <!--Card image-->
+    <img class="img-fluid" alt="Card image cap">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+
+        <p>Pokedex #{{_svc._selectedPokemon.id}}</p>
+        <h4 class="card-title">{{_svc._selectedPokemon.name}}</h4>
+        <p>Weight: {{_svc._selectedPokemon.weight}}</p>
+        <p>Height: {{_svc._selectedPokemon.height}}</p>
+        <!--Text-->
+
+    </div>
+
+</div>

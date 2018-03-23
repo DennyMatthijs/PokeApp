@@ -9,6 +9,10 @@ import { RouterModule } from '@angular/router';
 import { Navigation } from 'selenium-webdriver';
 import { FormsModule } from '@angular/forms';
 import { PokedexComponent } from './pokedex/pokedex.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PokedexService } from './services/pokedex.service';
+import { PokedexDescriptionComponent } from './pokedex-description/pokedex-description.component';
+import { PokedexPokemonComponent } from './pokedex-pokemon/pokedex-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,9 @@ import { PokedexComponent } from './pokedex/pokedex.component';
     HomeComponent,
     WelcomeComponent,
     NavigationComponent,
-    PokedexComponent
+    PokedexComponent,
+    PokedexPokemonComponent,
+    PokedexDescriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -27,10 +33,13 @@ import { PokedexComponent } from './pokedex/pokedex.component';
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       //{ path: "**", component: PageNotFoundComponent }
       ],{useHash: true}),
-      FormsModule
+      FormsModule,
+      HttpClientModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [
+    PokedexService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
