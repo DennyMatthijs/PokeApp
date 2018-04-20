@@ -22,7 +22,7 @@ export class WelcomeComponent implements OnInit {
   constructor() 
   {
      setInterval (() => {
-        this.randomNumber = _.random(1,3);   
+        this.randomNumber = _.random(1,4);   
         this.imageUrl = "../../assets/images/image" + this.randomNumber + ".jpg";
     }, 5000);
   }

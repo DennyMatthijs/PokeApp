@@ -11,7 +11,9 @@ export class PokedexDescriptionComponent implements OnInit {
 
   constructor(private _svc : PokedexService) { }
 
+
   ngOnInit() {
+  
       
   }
 

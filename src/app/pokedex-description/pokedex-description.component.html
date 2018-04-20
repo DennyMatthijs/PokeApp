@@ -1,18 +1,38 @@
 
  <div *ngIf="_svc._selectedPokemon != null" class="card">
 
+    
+    <p>Pokedex #{{_svc._selectedPokemon.id}}</p>
     <!--Card image-->
-    <img class="img-fluid" alt="Card image cap">
+    <img id="spriteImage" class="img-fluid" alt="Card image cap" src="{{_svc._selectedPokemon.sprites.front_default}}"> <!-- Before: {{_svc._selectedSprite.sprites.front_default}} -->
 
     <!--Card content-->
     <div class="card-body">
         <!--Title-->
 
-        <p>Pokedex #{{_svc._selectedPokemon.id}}</p>
         <h4 class="card-title">{{_svc._selectedPokemon.name}}</h4>
-        <p>Weight: {{_svc._selectedPokemon.weight}}</p>
-        <p>Height: {{_svc._selectedPokemon.height}}</p>
-        <!--Text-->
+
+        <!--<p><strong>Type:</strong> {{_svc._selectedPokemon.types[1].type.name}} </p> <p *ngIf="_svc._selectedPokemon.types[0]">{{_svc._selectedPokemon.types[0].type.name}}</p>-->
+        <img class="typeImage" *ngIf="_svc._selectedPokemon.types[1] != null" src="{{_svc._typeImage1}}">
+        <img class="typeImage" src="{{_svc._typeImage2}}">
+        <p><strong>Ability:</strong> {{_svc._selectedPokemon.abilities[1].ability.name}} </p>
+        <p *ngIf="_svc._selectedPokemon.abilities[0]"><strong>Hidden Ability:</strong> {{_svc._selectedPokemon.abilities[0].ability.name}} </p>
+
+        <div class="card">
+                <div class="card-header" id="base_stats_card_header"> <strong>Base Stats</strong></div>
+                <div class="card-block">
+        <table class="table table-hover">
+                <tbody>
+                        <tr> <strong> {{_svc._selectedPokemon.stats[5].stat.name}}:</strong> {{_svc._selectedPokemon.stats[5].base_stat}} </tr>
+                        <tr> <strong> {{_svc._selectedPokemon.stats[4].stat.name}}:</strong> {{_svc._selectedPokemon.stats[4].base_stat}} </tr>
+                        <tr> <strong> {{_svc._selectedPokemon.stats[3].stat.name}}:</strong> {{_svc._selectedPokemon.stats[3].base_stat}} </tr>
+                        <tr> <strong> {{_svc._selectedPokemon.stats[2].stat.name}}:</strong> {{_svc._selectedPokemon.stats[2].base_stat}} </tr>
+                        <tr> <strong> {{_svc._selectedPokemon.stats[1].stat.name}}:</strong> {{_svc._selectedPokemon.stats[1].base_stat}} </tr>
+                        <tr> <strong> {{_svc._selectedPokemon.stats[0].stat.name}}:</strong> {{_svc._selectedPokemon.stats[0].base_stat}} </tr>
+                </tbody>
+            </table>
+                </div>
+                </div>          
 
     </div>
 
