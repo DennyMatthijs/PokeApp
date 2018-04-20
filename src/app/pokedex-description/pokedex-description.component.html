@@ -4,7 +4,7 @@
     
     <p>Pokedex #{{_svc._selectedPokemon.id}}</p>
     <!--Card image-->
-    <img id="spriteImage" class="img-fluid" alt="Card image cap" src="{{_svc._selectedPokemon.sprites.front_default}}"> <!-- Before: {{_svc._selectedSprite.sprites.front_default}} -->
+    <img id="spriteImage" class="img-fluid" alt="Card image cap" src="{{_svc._selectedPokemon.sprites.front_default}}"> 
 
     <!--Card content-->
     <div class="card-body">
@@ -12,9 +12,9 @@
 
         <h4 class="card-title">{{_svc._selectedPokemon.name}}</h4>
 
-        <!--<p><strong>Type:</strong> {{_svc._selectedPokemon.types[1].type.name}} </p> <p *ngIf="_svc._selectedPokemon.types[0]">{{_svc._selectedPokemon.types[0].type.name}}</p>-->
         <img class="typeImage" *ngIf="_svc._selectedPokemon.types[1] != null" src="{{_svc._typeImage1}}">
         <img class="typeImage" src="{{_svc._typeImage2}}">
+
         <p><strong>Ability:</strong> {{_svc._selectedPokemon.abilities[1].ability.name}} </p>
         <p *ngIf="_svc._selectedPokemon.abilities[0]"><strong>Hidden Ability:</strong> {{_svc._selectedPokemon.abilities[0].ability.name}} </p>
 

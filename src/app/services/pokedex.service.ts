@@ -9,7 +9,6 @@ export class PokedexService
 {
     private _selectedIndex: number = null;  
     private _selectedPokemon: IPokemonDescriptionRoot = null;
-    //private _selectedSprite: ISpriteRoot = null;
     private _typeImage1: String = null;
     private _typeImage2: String = null;
     private _offsetUrl: string = "http://pokeapi.salestock.net/api/v2/pokemon/";
@@ -23,10 +22,6 @@ export class PokedexService
     getPokemonDescription(): Observable<IPokemonDescriptionRoot>{
         return this._http.get<IPokemonDescriptionRoot>("http://pokeapi.salestock.net/api/v2/pokemon/" + this._selectedIndex + "/");
     }
-
-    /*getPokemonSprite(): Observable<ISpriteRoot>{
-        return this._http.get<ISpriteRoot>("http://pokeapi.salestock.net/api/v2/pokemon-form/" + this._selectedIndex + "/");
-    }*/
 
     setTypeImages()
     {
@@ -157,17 +152,12 @@ export class PokedexService
     setIndex(selectedIndex : number) {
 
         //Set on null
-       // this._selectedSprite = null;
         this._selectedPokemon = null;
         this._typeImage1 = null;
         this._typeImage2 = null;
 
         //Check for current Pokemon
         this._selectedIndex = selectedIndex;
-       // this.getPokemonSprite().subscribe(result => {
-         //   if(this.getIndex() != null)
-           // {
-             //   this._selectedSprite = result;
 
                 this.getPokemonDescription().subscribe(result => {
                     if(this.getIndex() != null)
@@ -176,9 +166,7 @@ export class PokedexService
                         this.setTypeImages();                                         
                     }          
                 });
-            }
-       // });        
-    //}
+            }       
 
     getIndex()
     {
@@ -324,142 +312,6 @@ export class PokedexService
         base_experience: number;
         types: IType[];
     }
-
-
-
-   /* //Pokemon Description
-
-        export interface IAbility2 {
-            name: string;
-            url: string;
-        }
-    
-        export interface IAbility {
-            is_hidden: boolean;
-            slot: number;
-            ability: IAbility2;
-        }
-    
-        export interface IForm {
-            name: string;
-            url: string;
-        }
-    
-        export interface IVersion {
-            name: string;
-            url: string;
-        }
-    
-        export interface IGameIndice {
-            game_index: number;
-            version: IVersion;
-        }
-    
-        export interface IMove2 {
-            name: string;
-            url: string;
-        }
-    
-        export interface IVersionGroup {
-            name: string;
-            url: string;
-        }
-    
-        export interface IMoveLearnMethod {
-            name: string;
-            url: string;
-        }
-    
-        export interface IVersionGroupDetail {
-            level_learned_at: number;
-            version_group: IVersionGroup;
-            move_learn_method: IMoveLearnMethod;
-        }
-    
-        export interface IMove {
-            move: IMove2;
-            version_group_details: IVersionGroupDetail[];
-        }
-    
-        export interface ISpecies {
-            name: string;
-            url: string;
-        }
-    
-        export interface IStat2 {
-            name: string;
-            url: string;
-        }
-    
-        export interface IStat {
-            base_stat: number;
-            effort: number;
-            stat: IStat2;
-        }
-    
-        export interface IType2 {
-            name: string;
-            url: string;
-        }
-    
-        export interface IType {
-            slot: number;
-            type: IType2;
-        }
-    
-        export interface IPokemonDescriptionRoot {
-            id: number;
-            name: string;
-            base_experience: number;
-            height: number;
-            is_default: boolean;
-            order: number;
-            weight: number;
-            abilities: IAbility[];
-            forms: IForm[];
-            game_indices: IGameIndice[];
-            held_items: any[];
-            location_area_encounters: any[];
-            moves: IMove[];
-            species: ISpecies;
-            stats: IStat[];
-            types: IType[];
-        }
-    
-    //Pokemon Sprite Image
-
-        export interface ISprites {
-            front_default: string;
-            back_default: string;
-            front_shiny: string;
-            back_shiny: string;
-        }
-    
-        export interface IVersionGroup {
-            url: string;
-            name: string;
-        }
-    
-        export interface IPokemon {
-            url: string;
-            name: string;
-        }
-    
-        export interface ISpriteRoot {
-            is_battle_only: boolean;
-            sprites: ISprites;
-            version_group: IVersionGroup;
-            form_order: number;
-            is_mega: boolean;
-            form_names: any[];
-            id: number;
-            is_default: boolean;
-            names: any[];
-            form_name: string;
-            pokemon: IPokemon;
-            order: number;
-            name: string;
-        }*/
     
     
     
