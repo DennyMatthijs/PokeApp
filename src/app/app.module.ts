@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PokedexService } from './services/pokedex.service';
 import { PokedexDescriptionComponent } from './pokedex-description/pokedex-description.component';
 import { PokedexPokemonComponent } from './pokedex-pokemon/pokedex-pokemon.component';
+import { PokebeatsDescriptionComponent } from './pokebeats-description/pokebeats-description.component';
+import { PokebeatsService } from './services/pokebeats.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { PokedexPokemonComponent } from './pokedex-pokemon/pokedex-pokemon.compo
     NavigationComponent,
     PokedexComponent,
     PokedexPokemonComponent,
-    PokedexDescriptionComponent
+    PokedexDescriptionComponent,
+    PokebeatsDescriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { PokedexPokemonComponent } from './pokedex-pokemon/pokedex-pokemon.compo
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
-    PokedexService
+    PokedexService,
+    PokebeatsService
   ],
   bootstrap: [AppComponent]
 })
