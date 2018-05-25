@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'Lodash';
 import { document } from 'angular-bootstrap-md/utils/facade/browser';
+import { PokebeatsService, ISongDescriptionRoot } from '../services/pokebeats.service';
 
 @Component({
   selector: 'app-welcome',
@@ -12,14 +13,12 @@ export class WelcomeComponent implements OnInit {
   private randomNumber;
   imageUrl : string;
 
-  audioFiles: number[] = [1,2,3];
-  private _nr : number = 1;
+  audioFiles: ISongDescriptionRoot
 
   audio : string;
-  dir : string = "../assets/audio/pokemon_theme";
-  ext : string = ".mp3";
-  
-  constructor() 
+  selectedSong : number = 1;
+
+  constructor(private _svc : PokebeatsService) 
   {
      setInterval (() => {
         this.randomNumber = _.random(1,4);   
@@ -27,27 +26,25 @@ export class WelcomeComponent implements OnInit {
     }, 5000);
   }
 
-  get audioNr()
-  {
-      return this._nr;
-  }
-
-  set audioNr(value: number)
-  {
-      this._nr = value;
-      this.setAudio()
-  }
-
   setAudio()
   {
-    this.audio = this.dir + this._nr + this.ext;
+    console.log(this.selectedSong)
+    if(this.audioFiles != null)
+    {
+    var index = this.selectedSong - 1;
+    this.audio = this.audioFiles[index].source.directory + this.audioFiles[index].source.id + this.audioFiles[index].source.extension;
+    this._svc.setIndex(index);
     console.log(this.audio);
     document.getElementById("audio").load();
+    }
   }
 
   ngOnInit() {
+    this._svc.getSongDescription().subscribe(result => {
+      this.audioFiles = result;
+      this.setAudio();
+    });
     this.imageUrl = "../../assets/images/image2.jpg"
-    this.setAudio();
   }
 
 }

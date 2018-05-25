@@ -7,11 +7,19 @@ import "rxjs/add/observable/of";
 @Injectable()
 export class PokebeatsService
 {
+    private _selectedIndex : number = 0;
+
     constructor(private _http: HttpClient) { }
 
     getSongDescription(): Observable<ISongDescriptionRoot>{
         return this._http.get<ISongDescriptionRoot>("http://localhost:5000/api/v1/songs/");
     }
+
+    setIndex(index : number)
+    {
+        this._selectedIndex = index;
+    }
+
 }
 
 export interface ISongDescriptionRoot {

@@ -1,5 +1,5 @@
 
- <div class="card">
+ <div *ngIf="songs" class="card">
 
    
     <!--Card content-->
@@ -8,10 +8,10 @@
         <h4 class="card-title">Now Playing...</h4>
         <!--Text-->
 
-        <p class="card-text">{{songs[selectedIndex].title}}</p>
-        <p class="card-text">{{songs[selectedIndex].date}}</p>
-        <p class="card-text">{{songs[selectedIndex].artist.name}}</p>
-        <p class="card-text">{{songs[selectedIndex].length}}</p>
+        <p class="card-text">{{songs[_svc._selectedIndex].title}}</p>
+        <p class="card-text">{{songs[_svc._selectedIndex].date}}</p>
+        <p class="card-text">{{songs[_svc._selectedIndex].artist.name}}</p>
+        <p class="card-text">{{songs[_svc._selectedIndex].length}}</p>
 
     </div>
 

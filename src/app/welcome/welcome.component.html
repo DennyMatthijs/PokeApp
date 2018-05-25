@@ -10,8 +10,8 @@
                 <h4 class="card-title">Welcome to PokeApp!</h4>
                 <!--Text-->
 
-                <select class="form-control" [(ngModel)]="audioNr">
-                        <option *ngFor="let i of audioFiles" value="{{i}}">Pokemon Theme {{i}}</option>
+                <select (change)="setAudio()" class="form-control" [(ngModel)]="selectedSong">
+                        <option *ngFor="let song of audioFiles" [value]="song.id" >{{song.title}}</option>
                 </select>
 
                 <audio id="audio" controls>
