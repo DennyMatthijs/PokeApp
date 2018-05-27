@@ -8,11 +8,19 @@
         <h4 class="card-title">Now Playing...</h4>
         <!--Text-->
 
-        <p class="card-text">{{songs[_svc._selectedIndex].title}}</p>
-        <p class="card-text">{{songs[_svc._selectedIndex].date}}</p>
-        <p class="card-text">{{songs[_svc._selectedIndex].artist.name}}</p>
-        <p class="card-text">{{songs[_svc._selectedIndex].length}}</p>
+        <table class="table table-hover">
+            <thead class="songTitle">{{songs[_svc._selectedIndex].title}}</thead>
+            <tbody>
+                    <tr> <strong> Date:</strong> {{songs[_svc._selectedIndex].date}} </tr>
+                    <tr> <strong> Artist:</strong> {{songs[_svc._selectedIndex].artist.name}} </tr>
+                    <tr> <strong> Length:</strong> {{songs[_svc._selectedIndex].length}} </tr>
+                    <br>
+                    <tr> <strong> Season:</strong> {{songs[_svc._selectedIndex].timespan.season}} </tr>
+                    <tr> <strong> Debut:</strong> {{songs[_svc._selectedIndex].timespan.debutEpisode}} </tr>
+                    <tr> <strong> Finale:</strong> {{songs[_svc._selectedIndex].timespan.finalEpisode}} </tr>
 
+            </tbody>
+        </table>
     </div>
 
 </div>

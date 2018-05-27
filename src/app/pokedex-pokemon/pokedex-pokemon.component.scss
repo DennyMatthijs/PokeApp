@@ -1,0 +1,14 @@
+.card-header{
+    background-color: #f44444;
+    display: flex;
+}
+
+button{
+    flex-direction: row;
+}
+
+.form-control{
+    width: 15rem;
+    flex-direction: row;
+    margin-right: 2rem;
+}

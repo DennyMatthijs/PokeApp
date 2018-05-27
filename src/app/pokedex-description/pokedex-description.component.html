@@ -15,7 +15,9 @@
         <img class="typeImage" *ngIf="_svc._selectedPokemon.types[1] != null" src="{{_svc._typeImage1}}">
         <img class="typeImage" src="{{_svc._typeImage2}}">
 
-        <p><strong>Ability:</strong> {{_svc._selectedPokemon.abilities[1].ability.name}} </p>
+        
+        <p *ngIf="_svc._selectedPokemon.abilities[1]"><strong>Ability:</strong> {{_svc._selectedPokemon.abilities[1].ability.name}} </p>
+        <p *ngIf="_svc._selectedPokemon.abilities[2]"><strong>Ability #2:</strong> {{_svc._selectedPokemon.abilities[2].ability.name}}</p>
         <p *ngIf="_svc._selectedPokemon.abilities[0]"><strong>Hidden Ability:</strong> {{_svc._selectedPokemon.abilities[0].ability.name}} </p>
 
         <div class="card">

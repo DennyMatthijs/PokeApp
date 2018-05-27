@@ -7,7 +7,7 @@ import "rxjs/add/observable/of";
 @Injectable()
 export class PokedexService
 {
-    private _selectedIndex: number = null;  
+    private _selectedIndex: any = null; //Can be either a number (PokeDex #) or string (Name)
     private _selectedPokemon: IPokemonDescriptionRoot = null;
     private _typeImage1: String = null;
     private _typeImage2: String = null;
@@ -162,7 +162,8 @@ export class PokedexService
                 this.getPokemonDescription().subscribe(result => {
                     if(this.getIndex() != null)
                     {
-                        this._selectedPokemon = result;   
+                        this._selectedPokemon = result; 
+                        console.log(this._selectedPokemon);  
                         this.setTypeImages();                                         
                     }          
                 });

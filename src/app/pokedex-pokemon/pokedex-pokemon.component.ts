@@ -9,13 +9,9 @@ import { IResult, PokedexService, IPokemonRoot} from '../services/pokedex.servic
 export class PokedexPokemonComponent implements OnInit {
 
     pokemon : IPokemonRoot
+    private _search: any
 
     constructor(private _svc : PokedexService) { }
-
-    getPokemon()
-    {
-     //this.pokemon.results[]
-    }
   
     ngOnInit() {     
       //console.log(this.pokemon.results);
@@ -40,6 +36,24 @@ export class PokedexPokemonComponent implements OnInit {
       console.log(dexID);
       
       this._svc.setIndex(dexID);
+    }
+
+    get Search()
+    {
+      return this._search;
+    }
+
+    set Search(value: any)
+    {
+      this._search = value.toLowerCase();  
+    }
+
+    search()
+    {
+      if(this._search != null)
+      {
+        this._svc.setIndex(this._search);
+      }
     }
 
     next()
