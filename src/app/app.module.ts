@@ -15,7 +15,6 @@ import { PokedexDescriptionComponent } from './pokedex-description/pokedex-descr
 import { PokedexPokemonComponent } from './pokedex-pokemon/pokedex-pokemon.component';
 import { PokebeatsDescriptionComponent } from './pokebeats-description/pokebeats-description.component';
 import { PokebeatsService } from './services/pokebeats.service';
-import { AuthenticationService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -44,8 +43,7 @@ import { AuthenticationService } from './services/auth.service';
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
     PokedexService,
-    PokebeatsService,
-    AuthenticationService
+    PokebeatsService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
-import { AuthenticationService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navigation',
@@ -11,7 +10,7 @@ export class NavigationComponent implements OnInit {
 
   config: any;
   provider: any;
-
+  
   constructor() { 
     
     // Initialize Firebase
@@ -44,17 +43,23 @@ export class NavigationComponent implements OnInit {
       // The signed-in user info.
       var user = result.user;
       var displayName = user.displayName;
+      document.getElementById("signIn").style.display = "none";
+      document.getElementById("signOut").style.display = "block";
       // ...
     }).catch(function(error) {
       // Handle Errors here.
       var errorMessage = error.message;
     });
+
   }
 
   signOut()
   {
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
+      document.getElementById("signIn").style.display = "block";
+      document.getElementById("signOut").style.display = "none";
+      
     }).catch(function(error) {
       // An error happened.
     });

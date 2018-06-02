@@ -25,6 +25,14 @@
     height: 3rem;
 }
 
-.googleAuth{
-    font-size: 0.7rem;
+#signIn, #signOut{
+    color:#fff;
+    background-color:#dd4b39;
+    border-color:rgba(0,0,0,0.2);
+    width: 20rem;
+}
+
+#signOut{
+    width: 10rem;
+    display: none;
 }

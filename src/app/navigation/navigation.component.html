@@ -16,13 +16,17 @@
      <li class="nav-item" [routerLinkActive]="['active']">
          <a [routerLink]="['/pokedex']" class="nav-link waves-light" mdbRippleRadius>PokeDex</a>
      </li>
+
+     <li  (click)="signIn()" id="signIn" class="btn btn-block btn-social btn-google-plus">
+        <i class="fa fa-google-plus"></i> Sign in with Google
+    </li>
+    
+    <li (click)="signOut()" id="signOut" class="btn btn-block btn-social btn-google-plus"> Sign Out</li>
+    
  </ul>
  <!-- Links -->
  </links>
 <!-- Collapsible content -->
-    
-<button type="button" (click)="signIn()" class="googleAuth">SIGN IN WITH <i class="fa fa-google-plus right"></i> </button> 
-<button type="button" (click)="signOut()" class="googleAuth">SIGN OUT </button> 
 
 </mdb-navbar>
 <!--/.Navbar-->

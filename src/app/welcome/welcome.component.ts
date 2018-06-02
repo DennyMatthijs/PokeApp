@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import * as _ from 'Lodash';
 import { document } from 'angular-bootstrap-md/utils/facade/browser';
 import { PokebeatsService, ISongDescriptionRoot } from '../services/pokebeats.service';
-import { AuthenticationService } from '../services/auth.service';
 import * as firebase from 'firebase';
 
 @Component({
@@ -20,7 +19,7 @@ export class WelcomeComponent implements OnInit {
   audio : string;
   selectedSong : number = 1;
 
-  constructor(private _svc : PokebeatsService, private _authsvc : AuthenticationService) 
+  constructor(private _svc : PokebeatsService) 
   {
      setInterval (() => {
         this.randomNumber = _.random(1,4);   
