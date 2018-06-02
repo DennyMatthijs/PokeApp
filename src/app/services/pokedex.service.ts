@@ -11,7 +11,7 @@ export class PokedexService
     private _selectedPokemon: IPokemonDescriptionRoot = null;
     private _typeImage1: String = null;
     private _typeImage2: String = null;
-    private _offsetUrl: string = "http://pokeapi.salestock.net/api/v2/pokemon/";
+    private _offsetUrl: string = "https://pokeapi.co/api/v2/pokemon/";
 
     constructor(private _http: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class PokedexService
     } 
 
     getPokemonDescription(): Observable<IPokemonDescriptionRoot>{
-        return this._http.get<IPokemonDescriptionRoot>("http://pokeapi.salestock.net/api/v2/pokemon/" + this._selectedIndex + "/");
+        return this._http.get<IPokemonDescriptionRoot>("https://pokeapi.co/api/v2/pokemon/" + this._selectedIndex + "/");
     }
 
     setTypeImages()

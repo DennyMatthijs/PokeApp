@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as _ from 'Lodash';
 import { document } from 'angular-bootstrap-md/utils/facade/browser';
 import { PokebeatsService, ISongDescriptionRoot } from '../services/pokebeats.service';
+import { AuthenticationService } from '../services/auth.service';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-welcome',
@@ -18,7 +20,7 @@ export class WelcomeComponent implements OnInit {
   audio : string;
   selectedSong : number = 1;
 
-  constructor(private _svc : PokebeatsService) 
+  constructor(private _svc : PokebeatsService, private _authsvc : AuthenticationService) 
   {
      setInterval (() => {
         this.randomNumber = _.random(1,4);   
@@ -45,6 +47,21 @@ export class WelcomeComponent implements OnInit {
       this.setAudio();
     });
     this.imageUrl = "../../assets/images/image2.jpg"
+
+    firebase.auth().onAuthStateChanged(function(user){
+      if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+      
+        document.getElementById('account-name').textContent = user.displayName;
+        
+        
+    }
+    else
+    {
+      document.getElementById('account-name').textContent = "Guest";
+    }
+    });
   }
 
 }

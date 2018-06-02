@@ -15,6 +15,7 @@ import { PokedexDescriptionComponent } from './pokedex-description/pokedex-descr
 import { PokedexPokemonComponent } from './pokedex-pokemon/pokedex-pokemon.component';
 import { PokebeatsDescriptionComponent } from './pokebeats-description/pokebeats-description.component';
 import { PokebeatsService } from './services/pokebeats.service';
+import { AuthenticationService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PokebeatsService } from './services/pokebeats.service';
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: 'pokedex', component: PokedexComponent},
+      { path: 'redirectFromGoogle', redirectTo: 'home', pathMatch: 'full'},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       //{ path: "**", component: PageNotFoundComponent }
       ],{useHash: true}),
@@ -42,7 +44,8 @@ import { PokebeatsService } from './services/pokebeats.service';
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
     PokedexService,
-    PokebeatsService
+    PokebeatsService,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
