@@ -22,6 +22,17 @@
 
             </tbody>
         </table>
+        <p class="addArtist">Add your own Artist to the Database:</p>
+        <p><strong>Note:</strong> This will not change anything on the current UI, due to the timespan I had to work with. 
+            It will however put the artist into the local database.</p>
+        
+<div class="md-form">
+    <input mdbInputDirective placeholder="Name" type="text" id="artistName" class="form-control">
+    <label for="artistName" class=""></label>
+</div>
+
+<div class="waves-input-wrapper waves-light" mdbWavesEffect><input (click)="postRequest()" class="btn btn-primary" type="submit" value="Submit"></div>
+        
     </div>
 
 </div>

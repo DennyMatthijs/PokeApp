@@ -20,6 +20,14 @@ export class PokebeatsService
         this._selectedIndex = index;
     }
 
+    postAuthorRequest(body : any)
+    {
+        //console.log("Post Request with: " + body);
+        this._http.post("http://localhost:5000/api/v1/artists/", body).subscribe(result => {
+            //console.log("Post Result: " + result);
+        });
+    }
+
 }
 
 export interface ISongDescriptionRoot {

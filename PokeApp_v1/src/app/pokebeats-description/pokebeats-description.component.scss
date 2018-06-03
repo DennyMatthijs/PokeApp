@@ -1,6 +1,10 @@
-.songTitle{
+.songTitle, .addArtist{
     font-size: 2rem;
     color: #f44444;
+}
+
+.addArtist{
+    font-size: 1.5rem;
 }
 
 .img-pikachu{
@@ -16,4 +20,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+.btn-primary{
+    background-color: #dd4b39;
 }
