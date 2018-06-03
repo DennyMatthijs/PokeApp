@@ -12543,11 +12543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\denny\\Desktop\\Cloud APIs\\Project\\PokeBeatsAPI\\PokeBeatsAPI.csproj",
+      "projectUniqueName": "c:\\Users\\denny\\Desktop\\Cloud APIs\\Project\\PokeApp\\PokeBeatsAPI\\PokeBeatsAPI.csproj",
       "projectName": "PokeBeatsAPI",
-      "projectPath": "c:\\Users\\denny\\Desktop\\Cloud APIs\\Project\\PokeBeatsAPI\\PokeBeatsAPI.csproj",
+      "projectPath": "c:\\Users\\denny\\Desktop\\Cloud APIs\\Project\\PokeApp\\PokeBeatsAPI\\PokeBeatsAPI.csproj",
       "packagesPath": "C:\\Users\\denny\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\denny\\Desktop\\Cloud APIs\\Project\\PokeBeatsAPI\\obj\\",
+      "outputPath": "c:\\Users\\denny\\Desktop\\Cloud APIs\\Project\\PokeApp\\PokeBeatsAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

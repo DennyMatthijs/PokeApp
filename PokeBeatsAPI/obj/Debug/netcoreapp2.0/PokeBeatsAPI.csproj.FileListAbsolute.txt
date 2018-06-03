@@ -9,3 +9,14 @@ c:\Users\denny\Desktop\Cloud APIs\Project\PokeBeatsAPI\bin\Debug\netcoreapp2.0\P
 c:\Users\denny\Desktop\Cloud APIs\Project\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.dll
 c:\Users\denny\Desktop\Cloud APIs\Project\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.pdb
 c:\Users\denny\Desktop\Cloud APIs\Project\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.csprojAssemblyReference.cache
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\bin\Debug\netcoreapp2.0\PokeBeatsAPI.deps.json
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\bin\Debug\netcoreapp2.0\PokeBeatsAPI.runtimeconfig.json
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\bin\Debug\netcoreapp2.0\PokeBeatsAPI.runtimeconfig.dev.json
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\bin\Debug\netcoreapp2.0\PokeBeatsAPI.dll
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\bin\Debug\netcoreapp2.0\PokeBeatsAPI.pdb
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.csprojAssemblyReference.cache
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.csproj.CoreCompileInputs.cache
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.AssemblyInfoInputs.cache
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.AssemblyInfo.cs
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.dll
+c:\Users\denny\Desktop\Cloud APIs\Project\PokeApp\PokeBeatsAPI\obj\Debug\netcoreapp2.0\PokeBeatsAPI.pdb

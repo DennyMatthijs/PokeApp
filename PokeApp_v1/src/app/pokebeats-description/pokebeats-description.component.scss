@@ -2,3 +2,18 @@
     font-size: 2rem;
     color: #f44444;
 }
+
+.img-pikachu{
+    opacity: 0.3;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    align-self: flex-end;
+
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
